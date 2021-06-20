@@ -1,0 +1,183 @@
+/* 通用按钮样式 */
+.button{
+font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+background-color: white;
+font-size: 20px;
+padding-left:10px;
+padding-right:10px;
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+border-bottom-left-radius: 6px;
+border-bottom-right-radius: 6px;
+display: inline-block;
+position: relative;
+margin-top: 10px;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+
+}
+
+/* 设定了通用字体 */
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width:1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 通用a标签样式 */
+a{
+    text-decoration: none;
+    color:black;
+}
+
+/* 页眉样式 */
+.header{
+border-radius: 5px;
+width:100%;
+height:50px;
+background-color: white;
+margin:none;
+}
+
+/* 页眉左侧div样式 */
+.header-left{
+    margin:6px 0px 6px 20px;
+    float:left;
+    font-size: 25px;
+    color:rgb(133, 130, 130);
+    font-weight: bold;
+}
+
+/* 页眉右侧div样式 */
+.header-right{
+    margin:10px 20px 6px 0px;
+    float:right;
+    font-size: 20px;
+    color:rgb(218, 85, 32);
+    
+}
+
+/* 左侧边栏样式 */
+.sidebar{
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 14px;
+line-height: 1.42857143;
+color: #333;
+box-sizing: border-box;
+position: relative;
+min-height: 1px;
+float: left;
+width: 14.58333%;
+background-color: rgba(85, 85, 85,0.8);
+padding-top: 20px;
+height: 800px;
+padding-bottom: 20px;
+border-radius: 15px;
+margin-right:10px;
+margin-top:20px;
+border-bottom: 2px rgb(128, 128, 128) solid;
+}
+
+/* 左侧边栏头像的样式 */
+.potrait{
+    position:relative;
+    left:20%;
+    width:60%;
+    text-align:center;
+    display: flex;
+}
+
+/* 左侧边栏目录列表的样式 */
+ul.sidelist{
+    padding:0px;
+    margin-top: 35px;
+}
+
+/* 左侧边栏目录列表元素的样式 */
+.sideitem{
+    border-bottom: 6px ;
+    color:rgb(173, 173, 138);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 列表中的超链接元素样式*/
+a.sideitem:link
+{
+	display:block;
+	color:#706f6f;
+	text-align:center;
+	padding:10px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+/* 超链接元素鼠标悬停的颜色设置 */
+a.sideitem:hover{
+    background-color: #806527;
+}
+
+/* 左侧边栏下方信箱的样式设置 */
+#box{
+    position:absolute;
+    top:750px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color:snow;
+}
+
+/* 右侧主内容去样式 */
+.main{
+    width:83.5%;
+    margin-top:20px;
+    margin-right:15px;
+    float:right;
+}
+
+/* 主内容区标题的样式 */
+.title{
+    width:100%;
+    background-color:rgba(85, 85, 85, 0.774);
+    height:50px;
+    font-size: 30px;
+    color:ivory;
+    text-align: center;
+    border-radius: 5px;
+    border-bottom: 2px rgb(128, 128, 128) solid;
+    padding-top: 5px; 
+}
+
+/* 内容区样式设置 */
+.container{
+    border-radius: 5px;
+    width:100%;
+    margin-top: 20px;
+    background-color: rgba(215, 223, 226, 0.5);
+    border:1px rgb(196, 195, 195) solid;
+}
+
+/* 内容区中的边距设置 */
+.inner{
+    width:90%;
+    position: relative;
+    left:5%;
+    margin-top:30px;
+}
+
+/* 加粗元素类 */
+.boldelement{
+    font-weight: bold;
+}
+
+/* 页脚样式设置 */
+.footer{
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px black solid;
+    clear:right;
+    width:100%;
+}

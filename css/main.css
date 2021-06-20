@@ -1,0 +1,334 @@
+/*----------------------------------home界面的css------------------------------------*/
+
+/* main主内容部分的左侧div，包括欢迎语句、照片播放墙和名言 */
+#container-left{
+    width: 700px;
+}
+
+/* 欢迎语句的样式设计 */
+#introduce{
+    font-weight: 1000;
+    font-size: 60px;
+    text-align: left;
+}
+
+/* 名言的样式设计 */
+#saying{
+    margin-top: 50px;
+    border-top: 2px rgb(92, 92, 92) solid;
+}
+
+/* main主内容的右侧div，包含近期动态、近期阅读 */
+#recentbar{
+    width:33%;
+    right:3%;
+    float:right;
+    height:80%;
+}
+
+/* 设置近期内容的超链接文本样式 */
+a.recentitem{
+    color:black;
+    
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+li.recentlist{
+    margin-top: 15px;
+}
+
+/* 近期阅读部分的样式 */
+#recentreadings{
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 2px rgba(87, 87, 87, 0.5) solid;
+}
+
+/* 照片播放器的样式，主要思路是设置每张照片在X轴和Y轴方向进行角度转动，形成旋转 */
+@keyframes rotate-frame {
+	0% {
+		transform: rotateX(-20deg) rotateY(0deg);
+	}
+	10% {
+		transform: rotateX(-20deg) rotateY(36deg);
+	}
+	20% {
+		transform: rotateX(-20deg) rotateY(72deg);
+	}
+	30% {
+		transform: rotateX(-20deg) rotateY(108deg);
+	}
+	40% {
+		transform: rotateX(-20deg) rotateY(144deg);
+	}
+	50% {
+		transform: rotateX(-20deg) rotateY(180deg);
+	}
+	60% {
+		transform: rotateX(-20deg) rotateY(216deg);
+	}
+	70% {
+		transform: rotateX(-20deg) rotateY(252deg);
+	}
+	80% {
+		transform: rotateX(-20deg) rotateY(288deg);
+	}
+	90% {
+		transform: rotateX(-20deg) rotateY(324deg);
+	}
+	100% {
+		transform: rotateX(-20deg) rotateY(360deg);
+	}
+
+  }
+
+  /* 照片播放器的div */
+  .photo-wrap {
+	  perspective: 1200px;
+	  width: 800px;
+  }
+
+  /* 照片容器 */
+  .photo-container {
+	  width: 800px;
+	  height: 500px;
+	  margin: 0 auto;
+	  position: relative;
+	  transform-style: preserve-3d;
+	  transform:rotateX(-10deg);
+	  animation: rotate-frame 10s linear infinite;
+  }
+
+  /* 设置中心图片的样式 */
+  .img {
+	  width: 200px;
+	  height: 118px;
+	  line-height: 118px;
+	  text-align: center;
+	  position: absolute;
+	  top: 160px;
+	  left: 300px;
+	  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9) inset;
+	  -webkit-box-reflect:below 3px -webkit-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,0.5));
+	  transform: rotateY(0deg);
+  }
+
+  /* 设置四周旋转图片的样式 */
+  .img01 {
+	  transform: rotateY(0deg) translateZ(300px);
+  }
+  .img02 {
+	  transform: rotateY(40deg) translateZ(300px);
+  }
+  .img03 {
+	  transform: rotateY(80deg) translateZ(300px);
+  }
+  .img04 {
+	  transform: rotateY(120deg) translateZ(300px);
+  }
+  .img05 {
+	  transform: rotateY(160deg) translateZ(300px);
+  }
+  .img06 {
+	  transform: rotateY(200deg) translateZ(300px);
+  }
+  .img07 {
+	  transform: rotateY(240deg) translateZ(300px);
+  }
+  .img08 {
+	  transform: rotateY(280deg) translateZ(300px);
+  }
+  .img09 {
+	  transform: rotateY(320deg) translateZ(300px);
+  }
+
+
+            /* ----------------------相簿页面的css-----------------------*/
+
+/* 个人照片div */
+.solophotos{
+    width: 500px;
+	height: 750px;
+	overflow: hidden;
+    float:right;
+}
+
+/*个人照片容器*/
+.solophoto {
+	width: 1500px;
+	animation: switcha 5s ease-out infinite;
+}
+
+/* 设置个人照片向左切换 */
+.solophoto > img {
+	float: left;
+	width: 500px;
+	height: 750px;
+    margin-top: 40px;
+}
+
+/* 风景和群体照片div */
+.photos {
+	width: 700px;
+	height: 405px;
+	overflow: hidden;
+}
+ 
+/* 风景和群体照片容器 */
+.photo {
+	width: 2100px;
+	animation: switchb 5s ease-out infinite;
+}
+ 
+/* 设置照片向左切换 */
+.photo > img {
+	float: left;
+	width: 700px;
+	height: 405px;
+}
+ 
+/* 创建动画的规则，大体思路是让照片向左滑动，滑出容器之后则因为overflow:hidden而不显示 */
+@keyframes switchb {
+	0%, 25% {
+		margin-left: 0;
+	}
+	35%, 60% {
+		margin-left: -700px;
+	}
+	70%, 100% {
+		margin-left: -1400px;
+	}
+}
+
+@keyframes switcha {
+	0%, 25% {
+		margin-left: 0;
+	}
+	35%, 60% {
+		margin-left: -500px;
+	}
+	70%, 100% {
+		margin-left: -1000px;
+	}
+}
+
+
+/*---------------Resume界面内容--------------------*/
+
+/* 表格中小标题的样式 */
+.table-title{
+    background-color: rgba(143, 215, 243, 0.5);
+    font-weight: bold;
+}
+
+/* 表格样式，确定了表格的相对位置 */
+#resume{
+    position: relative;
+    left:15%;
+    width:70%;
+}
+
+/*-------------------moment界面内容------------------------*/
+
+/* 动态界面的上部图片的高度和宽度 */
+#moment-background{
+	width:100%;
+	height:40%;
+}
+
+/* 设定内部边距 */
+#moment-inner{
+	position:relative;
+	width:95%;
+	left:2.5%;
+	margin-top:30px;
+	margin-bottom: 30px;
+}
+
+/* 设定动态内容相对的宽度 */
+.moment{
+	width:100%;
+}
+
+/* 设定小头像的大小和在左侧浮动 */
+.potrait-s{
+	float:left;
+	width:80px;
+	height:80px;
+}
+
+/* 动态容器的样式 */
+.moment-container{
+	margin-left:100px;
+	padding-right: 100px;  /*左侧有float的头像，右侧没有，加一个padding让文本内容对称*/
+	border-bottom: rgba(221, 222, 224, 0.212) 1px solid;
+	margin-bottom: 25px;
+	padding-bottom: 20px;
+}
+
+/* 动态中用户名的样式 */
+.moment-id{
+	font-weight: bold;
+	font-size: 20px;
+	color:rgb(43, 117, 177);
+}
+
+/* 动态文本内容的样式 */
+.moment-text{
+	font-size: 17px;
+}
+
+/* 动态日期的样式 */
+.moment-datetime{
+	text-align: right;
+}
+
+/* 页面栏整体的样式 */
+.pagination-bar {
+	font-size: 0px;
+	padding: 20px 0px;
+	text-align: center;
+}
+
+/*页面栏中a元素样式*/
+.pagination-bar a {
+	display: inline-block;
+	padding: 5px 7.5px;
+	text-decoration: none;
+	min-width: 20px;
+	font-size: 16px;
+}
+
+/* 页面栏中可选取的元素样式 */
+.pagination-bar a:not(.disabled) {
+	background-color: #FFF;
+	color: #666;
+	border: 1px solid #BBBBBB;
+}
+
+/* 页面栏中不可选取的元素样式 */
+.pagination-bar a.disabled {
+	background-color: #666;
+	color: #FFF;
+	border: 1px solid #444;
+}
+
+/* 页面栏向前跳转按钮样式 */
+.page-prev {
+	border-radius: 15px 0px 0px 15px;
+}
+
+/* 页面栏向后跳转按钮样式 */
+.page-next {
+	border-radius: 0px 15px 15px 0px
+}
+
+/* 页面栏中省略选项的样式 */
+.pagination-bar span {
+	display: inline-block;
+	padding: 5px 7.5px;
+	font-size: 16px;
+	background-color: #FFF;
+}

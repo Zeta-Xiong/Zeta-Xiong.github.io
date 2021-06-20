@@ -1,0 +1,48 @@
+/* 意见箱窗口 */
+#suggestBox{
+    background-color: rgba(215, 223, 226, 0.7);
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width:600px;
+    padding:20px;
+    padding-bottom: 40px;
+    border-radius: 15px;
+}
+
+
+
+/* 问题div样式 */
+.question{
+    font-weight: bold;
+    text-align:left;
+    font-size: 16px;
+    margin:10px;
+}
+
+/* 答案div样式 */
+.answer{
+    text-align: left;
+    margin-left: 30px;
+}
+
+/* input样式 */
+input{
+    width:500px;
+    height:25px;
+    border:1px solid rgb(123, 123, 228);
+    border-radius: 5px;
+    margin:5px;
+}
+
+/* 表单样式 */
+#suggestText{
+    padding:0px 20px;
+    margin-top:18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgb(240, 240, 245);
+    font-size:20px;
+}
+
