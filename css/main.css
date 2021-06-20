@@ -226,8 +226,8 @@ li.recentlist{
 /* 表格样式，确定了表格的相对位置 */
 #resume{
     position: relative;
-    left:10%;
-    width:80%;
+    left:15%;
+    width:70%;
 }
 
 /*-------------------moment界面内容------------------------*/
