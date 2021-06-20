@@ -223,12 +223,17 @@ li.recentlist{
     font-weight: bold;
 }
 
-/* 表格样式，确定了表格的相对位置 */
+/* 包含表格的div样式，确定了表格的相对位置 */
 #resume{
     position: relative;
     left:15%;
     width:70%;
-    font-size:16px;
+	font-size: 16px;
+}
+
+/* 固定表格字体大小 */
+.table{
+	font-size: 16px;
 }
 
 /*-------------------moment界面内容------------------------*/
